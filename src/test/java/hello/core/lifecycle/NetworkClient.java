@@ -20,4 +20,9 @@ public class NetworkClient {
     public void call(String message) {
         System.out.println("call: " + url + "message = " + message);
     }
+
+    // 서비스 종료 시 호출
+    public void disconnect() {
+        System.out.println("close " + url);
+    }
 }
