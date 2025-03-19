@@ -32,6 +32,7 @@ public class NetworkClient implements InitializingBean, DisposableBean {
     // 의존관계 주입 끝나면 호출
     @Override
     public void afterPropertiesSet() throws Exception {
+        System.out.println("NetworkClient.afterPropertiesSet");
         connect();
         call("초기화 연결 메시지");
     }
@@ -39,6 +40,7 @@ public class NetworkClient implements InitializingBean, DisposableBean {
     // 빈이 종료될 때 호출
     @Override
     public void destroy() throws Exception {
+        System.out.println("NetworkClient.destroy");
         disconnect();
     }
 }
