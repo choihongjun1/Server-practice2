@@ -17,7 +17,7 @@ public class LogDemoController {
     @RequestMapping("log-demo")
     @ResponseBody
     public String logDemo(HttpServletRequest request) {
-        String requestURL = request.getRequestURL().toString();
+        String requestURL = request.getRequestURL().toString(); // request url 가져오기
         myLogger.setRequestURL(requestURL);
         myLogger.log("controller test");
         logDemoService.logic("testId");
